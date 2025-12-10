@@ -7,21 +7,22 @@
   <meta name="description" content="Noir Elixir – Espresso Radiance Oil. A 100% natural, vegan, cruelty-free coffee-infused face oil handcrafted in small batches in India." />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     :root {
       --bg: #050509;
       --bg-soft: #0b0b12;
-      --panel: #101018;
+      --panel: #12121c;
+      --panel-soft: #15151f;
       --gold: #d4af37;
       --gold-soft: #e7c76a;
-      --text: #f4f4f7;
-      --muted: #a5a5ba;
+      --text: #f5f5f7;
+      --muted: #a8a8bd;
       --border-subtle: rgba(255, 255, 255, 0.07);
       --radius-lg: 18px;
       --radius-xl: 26px;
-      --shadow-soft: 0 24px 40px rgba(0, 0, 0, 0.85);
+      --shadow-soft: 0 28px 60px rgba(0, 0, 0, 0.85);
     }
 
     * {
@@ -31,13 +32,15 @@
     }
 
     html, body {
-      height: 100%;
+      min-height: 100%;
       scroll-behavior: smooth;
     }
 
     body {
       font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #161623 0, #050509 60%);
+      background:
+        radial-gradient(circle at top, #202033 0, #050509 55%),
+        #050509;
       color: var(--text);
     }
 
@@ -46,7 +49,7 @@
     .page {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 20px 16px 56px;
+      padding: 20px 16px 64px;
     }
 
     /* HEADER */
@@ -65,19 +68,20 @@
     }
 
     .brand-logo {
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       border-radius: 999px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: radial-gradient(circle at 30% 0, #f8e4a6 0, #3b3020 40%, #050509 100%);
+      background:
+        radial-gradient(circle at 30% 0, #f8e4a6 0, #3b3020 50%, #050509 100%);
       color: #050509;
       font-family: "Playfair Display", serif;
       font-weight: 600;
       font-size: 16px;
-      border: 1px solid rgba(212, 175, 55, 0.5);
-      box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+      border: 1px solid rgba(212, 175, 55, 0.55);
+      box-shadow: 0 0 26px rgba(212, 175, 55, 0.55);
     }
 
     .brand-text {
@@ -119,8 +123,8 @@
       position: absolute;
       left: 0;
       bottom: -2px;
-      height: 1px;
       width: 0;
+      height: 1px;
       background: var(--gold-soft);
       transition: width 200ms ease-out;
     }
@@ -131,12 +135,13 @@
 
     .pill {
       border-radius: 999px;
-      border: 1px solid rgba(212, 175, 55, 0.5);
+      border: 1px solid rgba(212, 175, 55, 0.55);
       padding: 4px 10px;
       font-size: 10px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--gold-soft);
+      background: radial-gradient(circle at top, rgba(248, 228, 166, 0.1), transparent 60%);
     }
 
     /* HERO */
@@ -144,14 +149,14 @@
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-      gap: 32px;
+      gap: 40px;
       align-items: center;
-      padding: 24px 4px 32px;
-      min-height: 60vh;
+      padding: 24px 4px 40px;
+      min-height: 70vh;
     }
 
     .hero-left {
-      padding-right: 12px;
+      padding-right: 16px;
     }
 
     .hero-kicker {
@@ -164,9 +169,9 @@
 
     .hero-title {
       font-family: "Playfair Display", serif;
-      font-size: clamp(32px, 4vw, 42px);
-      line-height: 1.2;
-      margin-bottom: 6px;
+      font-size: clamp(34px, 4.5vw, 44px);
+      line-height: 1.15;
+      margin-bottom: 8px;
     }
 
     .hero-title span {
@@ -178,7 +183,7 @@
       text-transform: uppercase;
       letter-spacing: 0.16em;
       color: var(--muted);
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     .hero-copy {
@@ -186,19 +191,20 @@
       line-height: 1.7;
       color: var(--muted);
       max-width: 520px;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
 
     .hero-copy strong {
       color: var(--gold-soft);
+      font-weight: 500;
     }
 
     .hero-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px 26px;
+      gap: 18px 28px;
       font-size: 12px;
-      margin-bottom: 22px;
+      margin-bottom: 26px;
     }
 
     .meta-label {
@@ -233,7 +239,7 @@
     }
 
     .btn-primary {
-      background: linear-gradient(120deg, #f8e4a6, #d4af37, #a47721);
+      background: linear-gradient(130deg, #f8e4a6, #d4af37, #a47721);
       color: #191919;
       box-shadow: var(--shadow-soft);
     }
@@ -243,15 +249,17 @@
     }
 
     .btn-ghost {
-      border-color: rgba(255,255,255,0.2);
+      border-color: rgba(255, 255, 255, 0.2);
       color: var(--muted);
-      background: radial-gradient(circle at top left, rgba(255,255,255,0.08), transparent 60%);
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 60%);
     }
 
     .btn-ghost:hover {
       border-color: var(--gold-soft);
       color: var(--gold-soft);
     }
+
+    /* HERO RIGHT – product card */
 
     .hero-right {
       display: flex;
@@ -261,9 +269,9 @@
     .product-card {
       position: relative;
       width: 100%;
-      max-width: 320px;
-      border-radius: 28px;
-      padding: 18px 16px 16px;
+      max-width: 340px;
+      border-radius: 32px;
+      padding: 20px 18px 18px;
       background: radial-gradient(circle at top, #201b13 0, #050509 55%);
       border: 1px solid rgba(212, 175, 55, 0.45);
       box-shadow: var(--shadow-soft);
@@ -274,7 +282,7 @@
       position: absolute;
       inset: -40%;
       background:
-        radial-gradient(circle at 20% 0, rgba(248,228,166,0.3), transparent 55%),
+        radial-gradient(circle at 20% 0, rgba(248,228,166,0.35), transparent 55%),
         radial-gradient(circle at 80% 100%, rgba(44, 29, 10, 0.7), transparent 65%);
       opacity: 0.8;
       pointer-events: none;
@@ -297,30 +305,30 @@
       height: 5px;
       border-radius: 999px;
       background: var(--gold-soft);
-      box-shadow: 0 0 12px rgba(212,175,55,0.9);
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.9);
     }
 
     .bottle {
-      margin: 26px auto 20px;
-      width: 120px;
-      height: 220px;
+      margin: 28px auto 22px;
+      width: 130px;
+      height: 230px;
       border-radius: 999px;
       position: relative;
       background:
         linear-gradient(180deg, rgba(0,0,0,0.98), #151515 30%, #1b140d 60%, #000 100%),
-        radial-gradient(circle at 20% 0, rgba(255,255,255,0.35), transparent 60%);
+        radial-gradient(circle at 20% 0, rgba(255,255,255,0.32), transparent 65%);
       box-shadow:
         0 0 0 1px rgba(255,255,255,0.05),
-        0 24px 50px rgba(0,0,0,0.9),
-        0 -16px 40px rgba(212,175,55,0.5);
+        0 26px 52px rgba(0,0,0,0.92),
+        0 -16px 42px rgba(212,175,55,0.5);
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .bottle-body {
-      width: 76px;
-      height: 150px;
+      width: 82px;
+      height: 160px;
       border-radius: 999px;
       background:
         linear-gradient(180deg, rgba(248,228,166,0.2), transparent 22%),
@@ -335,8 +343,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 72%;
-      height: 50%;
+      width: 74%;
+      height: 52%;
       border-radius: 18px;
       background: rgba(5,5,8,0.95);
       border: 1px solid rgba(212,175,55,0.7);
@@ -365,15 +373,15 @@
 
     .bottle-cap {
       position: absolute;
-      top: -38px;
+      top: -40px;
       left: 50%;
       transform: translateX(-50%);
-      width: 68px;
-      height: 38px;
-      border-radius: 22px 22px 16px 16px;
+      width: 72px;
+      height: 40px;
+      border-radius: 24px 24px 18px 18px;
       background: linear-gradient(120deg, #f8e4a6, #d4af37, #805c19);
       box-shadow:
-        0 10px 16px rgba(0,0,0,0.9),
+        0 10px 18px rgba(0,0,0,0.9),
         0 -4px 10px rgba(255,255,255,0.2);
     }
 
@@ -394,9 +402,9 @@
 
     .section {
       margin-top: 40px;
-      padding: 26px 18px;
+      padding: 26px 20px;
       border-radius: var(--radius-xl);
-      background: linear-gradient(145deg, #12121c, #050509);
+      background: linear-gradient(145deg, var(--panel), #050509);
       border: 1px solid var(--border-subtle);
       box-shadow: 0 22px 46px rgba(0,0,0,0.8);
     }
@@ -427,7 +435,7 @@
     .section-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 20px;
+      gap: 22px;
       margin-top: 12px;
     }
 
@@ -470,7 +478,7 @@
     .pill-soft {
       padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.18);
       font-size: 11px;
       color: var(--muted);
       background: radial-gradient(circle at top, rgba(255,255,255,0.06), transparent 60%);
@@ -510,7 +518,7 @@
 
     .ethos-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 14px;
       margin-top: 10px;
     }
@@ -518,7 +526,7 @@
     .ethos-card {
       padding: 10px 12px;
       border-radius: var(--radius-lg);
-      background: #0b0b14;
+      background: var(--panel-soft);
       border: 1px solid rgba(255,255,255,0.08);
       font-size: 13px;
       color: var(--muted);
@@ -533,35 +541,41 @@
       margin-bottom: 4px;
     }
 
-    .waitlist-form { margin-top: 14px; }
+    /* WAITLIST CTA (no form!) */
 
-    .waitlist-row {
+    .waitlist-cta {
+      margin-top: 16px;
+      padding: 16px 14px;
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, rgba(255,255,255,0.06), transparent 65%);
+      border: 1px solid rgba(255,255,255,0.09);
+    }
+
+    .waitlist-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .waitlist-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       align-items: center;
     }
 
-    .waitlist-input {
-      flex: 1 1 190px;
-      min-width: 0;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: #050509;
-      color: var(--text);
-      padding: 9px 12px;
-      font-size: 13px;
-    }
-
-    .waitlist-input::placeholder {
-      color: rgba(169,169,181,0.8);
-    }
-
-    .waitlist-note {
+    .cta-secondary {
       font-size: 11px;
       color: var(--muted);
-      margin-top: 6px;
     }
+
+    .cta-link {
+      color: var(--gold-soft);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* FOOTER */
 
     .site-footer {
       margin-top: 40px;
@@ -601,7 +615,7 @@
 
     @media (max-width: 540px) {
       .page { padding-inline: 14px; }
-      .section { padding-inline: 14px; }
+      .section { padding-inline: 16px; }
       .hero-actions { flex-direction: column; align-items: flex-start; }
       .site-footer { flex-direction: column; align-items: flex-start; }
     }
@@ -636,7 +650,7 @@
         <p class="hero-copy">
           <strong>Espresso Radiance Oil</strong> is a slow-infused elixir that blends
           hand-roasted coffee with virgin coconut oil and natural Vitamin&nbsp;E.
-          Each micro-batch is crafted to awaken dull, tired skin with a soft
+          Each micro-batch is crafted to awaken dull, tired skin with a soft,
           caffeinated glow—without a single synthetic fragrance or preservative.
         </p>
 
@@ -651,16 +665,16 @@
           </div>
           <div>
             <div class="meta-label">Ideal For</div>
-            <div class="meta-value">Dull, city-stressed skin</div>
+            <div class="meta-value">Dull, city-stressed, screen-tired skin</div>
           </div>
         </div>
 
         <div class="hero-actions">
-          <button class="btn-primary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">
-            Join the Early Access List
+          <button class="btn-primary" onclick="document.getElementById('ethos').scrollIntoView({behavior:'smooth'})">
+            Discover Noir Elixir
           </button>
           <button class="btn-ghost" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">
-            Discover the Ritual
+            Read the Story
           </button>
         </div>
       </section>
@@ -720,8 +734,8 @@
             of natural extraction.
           </p><br>
           <p>
-            The result is an oil that doesn’t just sit on the surface. It melts in. It softens. It brightens.
-            It leaves behind a velvety glow and that subtle, addictive coffee warmth.
+            The result is an oil that doesn’t just sit on the surface. It melts in, softens,
+            and brightens—leaving behind a velvety glow and that subtle, addictive coffee warmth.
           </p>
 
           <div class="pill-row">
@@ -729,7 +743,7 @@
             <span class="pill-soft">Virgin Coconut Oil</span>
             <span class="pill-soft">Natural Vitamin E</span>
             <span class="pill-soft">No Fragrance • No Synthetics</span>
-            <span class="pill-soft">Handcrafted in Small Batches</span>
+            <span class="pill-soft">Handcrafted in Micro-Batches</span>
           </div>
         </div>
 
@@ -743,7 +757,7 @@
             </li>
             <li>
               <strong>Coffee Infusion</strong> – rich in natural antioxidants, it helps
-              revive dull, fatigued skin and gives that “awake” feeling.
+              revive dull, fatigued skin and lends that “awake” feeling.
             </li>
             <li>
               <strong>Vitamin E</strong> – supports barrier health and helps keep the oil
@@ -818,7 +832,7 @@
       </div>
     </section>
 
-    <!-- ETHOS + WAITLIST -->
+    <!-- ETHOS + “WAITLIST” CTA (no insecure form) -->
     <section id="ethos" class="section reveal">
       <div class="section-header">
         <p class="section-kicker">Our Philosophy</p>
@@ -852,51 +866,4 @@
           </div>
         </div>
 
-        <div class="section-text" id="waitlist">
-          <p class="section-mini-title">Be the first to experience Noir Elixir.</p>
-          <p>
-            We’re carefully finalising our first batch. Join the early access list and
-            you’ll be the first to know when Espresso Radiance Oil goes live—plus
-            receive a special founder’s offer.
-          </p>
-
-          <form class="waitlist-form" action="mailto:hello@noirelixir.com" method="post" enctype="text/plain">
-            <div class="waitlist-row">
-              <input class="waitlist-input" type="email" name="email" placeholder="Enter your email address" required>
-              <button type="submit" class="btn-primary">Notify Me</button>
-            </div>
-            <p class="waitlist-note">
-              By joining, you agree to receive launch updates from Noir Elixir. No spam, only glow.
-            </p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <span>© <span id="year"></span> Noir Elixir. All rights reserved.</span>
-      <span>Handcrafted in India • 100% Natural • Vegan • Cruelty-Free</span>
-    </footer>
-  </div>
-
-  <script>
-    // footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // scroll reveal
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('reveal-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
-</body>
-</html>
+        <
