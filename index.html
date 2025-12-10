@@ -866,4 +866,55 @@
           </div>
         </div>
 
-        <
+        <div class="section-text">
+          <p class="section-mini-title">Be the first to experience Noir Elixir.</p>
+          <p>
+            We’re carefully finalising our first batch. Until then, step behind the curtain and
+            follow the journey.
+          </p>
+
+          <div class="waitlist-cta">
+            <p class="waitlist-note">
+              Tap below to follow <strong>@noirelixirindia</strong> on Instagram and DM us
+              “ESPRESSO” to join the inner circle for launch updates and founder-only offers.
+            </p>
+            <div class="waitlist-actions">
+              <a href="https://instagram.com/noirelixirindia" target="_blank" rel="noreferrer" class="btn-primary">
+                Follow on Instagram
+              </a>
+              <span class="cta-secondary">
+                Prefer email later? We’ll add a secure sign-up when we open pre-orders.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Noir Elixir. All rights reserved.</span>
+      <span>Handcrafted in India • 100% Natural • Vegan • Cruelty-Free</span>
+    </footer>
+  </div>
+
+  <script>
+    // footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // scroll reveal
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
